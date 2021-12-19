@@ -41,7 +41,7 @@ class AnimatedText extends HookWidget {
       alignment: alignment,
       child: AnimatedOpacity(
         opacity: opacity,
-        duration: AppConst.animDuration,
+        duration: AppConst.defaultAnimDuration,
         child: Text(
           text,
           textAlign: TextAlign.center,

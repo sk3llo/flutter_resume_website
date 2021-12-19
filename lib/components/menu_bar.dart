@@ -36,17 +36,6 @@ class MenuBar extends StatelessWidget {
                         ),
                       ),
                       TextButton(
-                        onPressed: () {},
-                        child: Text(
-                          "PORTFOLIO",
-                          style: Theme.of(context).textTheme.button,
-                        ),
-                        style: ButtonStyle(
-                          overlayColor:
-                              MaterialStateProperty.all(Colors.transparent),
-                        ),
-                      ),
-                      TextButton(
                         onPressed: () =>
                             Navigator.pushNamed(context, Routes.style),
                         child: Text(

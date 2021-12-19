@@ -6,4 +6,5 @@ class AppColors {
   static const textSecondary = Color(0xFF071170);
   static const textHightlight = Color(0xFFfab66e);
   static const boxHightlight = Color(0xFFfff9eb);
+  static const inactiveColor = Color(0xFFbfbfbf);
 }

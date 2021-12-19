@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
-import 'package:flutter_resume_website/pages/home/components/job/jobs_list_bloc.dart';
+import 'package:flutter_resume_website/pages/home/components/jobs_list/jobs_list_bloc.dart';
 import 'package:flutter_resume_website/pages/home/home.dart';
 import 'package:flutter_resume_website/utils/constants.dart';
 import 'package:hooks_riverpod/hooks_riverpod.dart';

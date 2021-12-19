@@ -17,7 +17,7 @@ class Header extends HookWidget {
     final opacityValues = useState(List.filled(6, 0.0));
     // Run once unless key changes
     useEffect(() {
-      Timer.periodic(AppConst.animDuration, (timer) {
+      Timer.periodic(AppConst.defaultAnimDuration, (timer) {
         opacityValues.value = handleOpacity(timer, opacityValues.value);
       });
     }, ['']);

@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_resume_website/components/components.dart';
-import 'package:flutter_resume_website/pages/home/components/job/components/components.dart';
+import 'package:flutter_resume_website/pages/home/components/jobs_list/components/components.dart';
 import 'package:flutter_resume_website/utils/spacing.dart';
 
 import 'components/components.dart';

@@ -13,7 +13,7 @@ class HiImDevName extends StatelessWidget {
   Widget build(BuildContext context) {
     return AnimatedOpacity(
       opacity: devNameOpacity,
-      duration: AppConst.animDuration,
+      duration: AppConst.defaultAnimDuration,
       child: RichText(
         text: TextSpan(children: [
           TextSpan(
