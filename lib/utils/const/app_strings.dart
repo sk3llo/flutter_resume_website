@@ -1,10 +1,10 @@
 abstract class AppStrings {
-  // Links to social networks
+  // LINKS to social networks
   static const devLinkedIn = 'https://www.linkedin.com/in/kapraton/';
   static const devGithub = 'https://github.com/sk3llo/';
   static const devEmail = 'kapraton@gmail.com';
 
-  // Home page text
+  // HOME page text
   static const headlineText = "Hi, I'm ";
   static const devFirstName = 'Anton';
   static const devLastName = 'Karpenko';
@@ -17,13 +17,13 @@ abstract class AppStrings {
   static const pizzaToppingsSecond = 'well, the toppings will depend on '
       'the project that I’m working on at the time';
 
-  // Toolbar actions
+  // TOOLBAR actions
   static const toolbarFirstAction = 'HOME';
   static const toolbarSecondAction = 'STYLE';
   static const toolbarThirdAction = 'ABOUT';
   static const toolbarForthAction = 'CONTACT';
 
-  // About page text
+  // ABOUT page text
   static const aboutPageHeaderTitle = 'Hi there!';
   static const aboutPageHeaderFirstSubtitle =
       "I'm Anton, Software Developer who loves to design, construct and manage"
@@ -57,7 +57,7 @@ abstract class AppStrings {
       "I like to say that beauty is in "
       "simplicity. Therefore I really enjoy creating stable and scalable "
       "digital products that are easy to use and which improve people's lives"
-      " around me. That's what keeps me going everyday.";
+      " around me. That's what keeps me going everyday.\n";
   static const aboutPageSecondBodyBlockSubtitle = "Complex tasks uncovers new "
       "perspectives to problems and goes beyond the obvious to exhume creative solutions. "
       "I am constantly discovering approaches to coding problems "
@@ -72,7 +72,7 @@ abstract class AppStrings {
       "freelance opportunities to help grow values-driven, bold and "
       "disruptive businesses — if such is the ethos of your project, I’d be "
       "very happy to start a conversation. I'm also up for meeting fellow "
-      "hackers around the world to chat about new tech discoveries or to discuss"
+      "hackers around the world to chat about new tech discoveries or to discuss "
       "new opportunities. Drop me a message at $devEmail, I would love to hear from you.";
   static const aboutPageDontBeShy = "Don't be shy - get in touch!";
 }

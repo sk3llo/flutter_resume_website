@@ -2,8 +2,8 @@ import 'package:flutter/material.dart';
 import 'package:flutter_hooks/flutter_hooks.dart';
 import 'package:flutter_resume_website/pages/about/components/components.dart';
 
-class HeaderSecondTitle extends HookWidget {
-  const HeaderSecondTitle({
+class HeaderSecondHeadline extends HookWidget {
+  const HeaderSecondHeadline({
     this.width = 450.0,
     required this.title,
     required this.subtitle,
@@ -15,7 +15,7 @@ class HeaderSecondTitle extends HookWidget {
 
   @override
   Widget build(BuildContext context) {
-    const spacing = 16.0;
+    const spacing = 50.0;
 
     return Column(
       mainAxisAlignment: MainAxisAlignment.center,

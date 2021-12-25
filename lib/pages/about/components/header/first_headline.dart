@@ -3,8 +3,8 @@ import 'package:flutter_hooks/flutter_hooks.dart';
 import 'package:flutter_resume_website/pages/about/components/components.dart';
 import 'package:flutter_resume_website/utils/const/const.dart';
 
-class HeaderFirstTitle extends HookWidget {
-  const HeaderFirstTitle({this.width = 450.0});
+class HeaderFirstHeadline extends HookWidget {
+  const HeaderFirstHeadline({this.width = 450.0});
 
   final double width;
 
