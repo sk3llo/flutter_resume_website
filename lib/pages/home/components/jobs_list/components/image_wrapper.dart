@@ -1,6 +1,6 @@
 import 'package:flutter/gestures.dart';
 import 'package:flutter/material.dart';
-import 'package:flutter_resume_website/utils/constants.dart';
+import 'package:flutter_resume_website/utils/const/const.dart';
 
 class ImageWrapper extends StatelessWidget {
   const ImageWrapper({
@@ -39,7 +39,7 @@ class ImageWrapper extends StatelessWidget {
         child: AnimatedContainer(
           padding: padding,
           decoration: imageDecoration,
-          duration: AppConst.defaultAnimDuration,
+          duration: AppAnim.defaultAnimDuration,
           child: Image.asset(
             image,
             width: _w,

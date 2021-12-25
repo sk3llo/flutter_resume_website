@@ -2,45 +2,39 @@ import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:flutter_resume_website/pages/home/components/jobs_list/jobs_list_bloc.dart';
 import 'package:flutter_resume_website/pages/home/home.dart';
-import 'package:flutter_resume_website/utils/constants.dart';
+import 'package:flutter_resume_website/utils/const/app_jobs.dart';
 import 'package:hooks_riverpod/hooks_riverpod.dart';
 
 class JobsList extends ConsumerStatefulWidget {
-  const JobsList({
-    Key? key,
-    required this.animListKey,
-  }) : super(key: key);
-
-  final GlobalKey<AnimatedListState> animListKey;
-
   @override
   ConsumerState createState() => JobsListState();
 }
 
 class JobsListState extends ConsumerState<JobsList> {
+  final animListKey = GlobalKey<AnimatedListState>();
   late JobsListBloc bloc;
   late ScrollController controller;
 
   @override
   void initState() {
-    controller = ref.read(appScrollController);
+    super.initState();
+    controller = ref.read(homeScrollController);
     bloc = JobsListBloc(
       controller: controller,
-      animListKey: widget.animListKey,
+      animListKey: animListKey,
     );
-    bloc.listenToScrollChanges();
-    super.initState();
+    controller.addListener(bloc.listenToScrollChanges);
   }
 
   @override
   Widget build(BuildContext context) {
-    final jobs = AppConst.listOfJobs;
+    final jobs = AppJobs.listOfJobs;
 
     return BlocBuilder<JobsListBloc, List<bool>>(
         bloc: bloc,
         builder: (context, state) {
           return AnimatedList(
-              key: widget.animListKey,
+              key: animListKey,
               physics: NeverScrollableScrollPhysics(),
               initialItemCount: jobs.length,
               shrinkWrap: true,

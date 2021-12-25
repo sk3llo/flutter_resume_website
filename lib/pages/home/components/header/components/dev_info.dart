@@ -1,8 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_hooks/flutter_hooks.dart';
 import 'package:flutter_resume_website/pages/home/components/header/components/components.dart';
-import 'package:flutter_resume_website/utils/constants.dart';
-import 'package:flutter_resume_website/utils/spacing.dart';
+import 'package:flutter_resume_website/utils/const/const.dart';
 
 class DevInfo extends HookWidget {
   final List<double> opacityValues;
@@ -22,25 +21,25 @@ class DevInfo extends HookWidget {
       children: [
         // Headline
         HiImDevName(devNameOpacity: devNameOpacity),
-        Padding(padding: paddingBottom24),
+        Padding(padding: AppDimensions.paddingBottom24),
         // Body text
-        AnimatedText.bodyStyle(
-          text: AppConst.bodyText,
+        AppAnimText.bodyStyle(
+          text: AppStrings.bodyText,
           opacity: bodyOpacity,
-          style: Theme.of(context).textTheme.subtitle1,
+          style: Theme.of(context).textTheme.bodyText2!.copyWith(fontSize: 22),
         ),
-        Padding(padding: paddingBottom40),
+        Padding(padding: AppDimensions.paddingBottom40),
         // Pizza properties
-        AnimatedText(
-          text: AppConst.pizzaBase,
+        AppAnimText(
+          text: AppStrings.pizzaBase,
           opacity: baseOpacity,
         ),
-        Padding(padding: paddingBottom32),
-        AnimatedText(
-          text: AppConst.pizzaSauce,
+        Padding(padding: AppDimensions.paddingBottom32),
+        AppAnimText(
+          text: AppStrings.pizzaSauce,
           opacity: sauceOpacity,
         ),
-        Padding(padding: paddingBottom32),
+        Padding(padding: AppDimensions.paddingBottom32),
         PizzaToppings(
           firstToppingOpacity,
           secondToppingOpacity,

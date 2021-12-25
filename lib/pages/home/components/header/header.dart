@@ -4,8 +4,7 @@ import 'package:flutter/material.dart';
 import 'package:flutter_hooks/flutter_hooks.dart';
 import 'package:flutter_resume_website/pages/home/components/header/components/components.dart';
 import 'package:flutter_resume_website/pages/home/components/header/components/dev_image.dart';
-import 'package:flutter_resume_website/utils/constants.dart';
-import 'package:flutter_resume_website/utils/spacing.dart';
+import 'package:flutter_resume_website/utils/const/const.dart';
 
 class Header extends HookWidget {
   const Header({required this.imageAsset});
@@ -17,7 +16,7 @@ class Header extends HookWidget {
     final opacityValues = useState(List.filled(6, 0.0));
     // Run once unless key changes
     useEffect(() {
-      Timer.periodic(AppConst.defaultAnimDuration, (timer) {
+      Timer.periodic(AppAnim.defaultAnimDuration, (timer) {
         opacityValues.value = handleOpacity(timer, opacityValues.value);
       });
     }, ['']);
@@ -29,14 +28,14 @@ class Header extends HookWidget {
           imageAsset: imageAsset,
           width: MediaQuery.of(context).size.width / 2 - 32,
         ),
-        Padding(padding: paddingBottom16),
+        Padding(padding: AppDimensions.paddingBottom16),
         Expanded(
           child: Column(
             crossAxisAlignment: CrossAxisAlignment.center,
             mainAxisAlignment: MainAxisAlignment.center,
             children: [
               DevInfo(opacityValues: opacityValues.value),
-              Padding(padding: paddingBottom16),
+              Padding(padding: AppDimensions.paddingBottom16),
             ],
           ),
         )

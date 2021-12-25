@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:flutter_resume_website/utils/constants.dart';
+import 'package:flutter_resume_website/utils/const/const.dart';
 
 class HiImDevName extends StatelessWidget {
   const HiImDevName({
@@ -13,15 +13,15 @@ class HiImDevName extends StatelessWidget {
   Widget build(BuildContext context) {
     return AnimatedOpacity(
       opacity: devNameOpacity,
-      duration: AppConst.defaultAnimDuration,
+      duration: AppAnim.defaultAnimDuration,
       child: RichText(
         text: TextSpan(children: [
           TextSpan(
-            text: AppConst.headlineText,
+            text: AppStrings.headlineText,
             style: Theme.of(context).textTheme.headline1,
           ),
           TextSpan(
-            text: AppConst.firstName,
+            text: AppStrings.devFirstName,
             style: Theme.of(context).textTheme.headline2,
           ),
           TextSpan(

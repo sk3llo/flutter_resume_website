@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:flutter_resume_website/utils/spacing.dart';
+import 'package:flutter_resume_website/utils/const/const.dart';
 
 import 'tag.dart';
 
@@ -11,7 +11,7 @@ class TagWrapper extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Padding(
-        padding: paddingBottom24,
+        padding: AppDimensions.paddingBottom24,
         child: Wrap(
           spacing: 8,
           runSpacing: 0,

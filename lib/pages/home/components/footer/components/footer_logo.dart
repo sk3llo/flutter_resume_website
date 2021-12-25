@@ -3,7 +3,7 @@ import 'package:flutter_hooks/flutter_hooks.dart';
 import 'package:flutter_resume_website/pages/home/components/jobs_list/components/components.dart';
 import 'package:flutter_resume_website/utils/app_colors.dart';
 import 'package:flutter_resume_website/utils/app_images.dart';
-import 'package:flutter_resume_website/utils/constants.dart';
+import 'package:flutter_resume_website/utils/const/const.dart';
 import 'package:url_launcher/url_launcher.dart' as url;
 
 const _logoSize = 32.0;
@@ -21,9 +21,9 @@ class FooterLogo extends HookWidget {
         padding: EdgeInsets.all(12),
         onImageTapped: () async {
           if (logoAsset == AppImages.gitLogo) {
-            await url.launch(AppConst.githubLink);
+            await url.launch(AppStrings.devGithub);
           } else {
-            await url.launch(AppConst.linkedInLink);
+            await url.launch(AppStrings.devLinkedIn);
           }
         },
         onMouseEnter: (event) {

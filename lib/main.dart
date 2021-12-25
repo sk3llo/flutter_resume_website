@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:flutter_resume_website/pages/about/about_page.dart';
 import 'package:flutter_resume_website/utils/app_theme.dart';
 import 'package:flutter_resume_website/utils/routes.dart';
 import 'package:hooks_riverpod/hooks_riverpod.dart';
@@ -35,13 +36,19 @@ class MyApp extends StatelessWidget {
               case Routes.home:
                 return Home();
               case Routes.post:
-                return JobDetails();
+                return JobDetailsPage();
               case Routes.style:
                 return TypographyPage();
+              case Routes.about:
+                return AboutPage();
               default:
                 return SizedBox.shrink();
             }
-          });
+          })!
+            // When route is popped remove last entry of it from Routes instance
+            ..popped.then((value) {
+              Routes.removeLastRoute();
+            });
         },
         debugShowCheckedModeBanner: false,
       ),

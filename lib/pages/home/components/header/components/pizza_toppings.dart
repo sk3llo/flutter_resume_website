@@ -2,7 +2,7 @@ import 'dart:async';
 
 import 'package:flutter/material.dart';
 import 'package:flutter_hooks/flutter_hooks.dart';
-import 'package:flutter_resume_website/utils/constants.dart';
+import 'package:flutter_resume_website/utils/const/const.dart';
 
 class PizzaToppings extends HookWidget {
   const PizzaToppings(
@@ -44,14 +44,14 @@ class PizzaToppings extends HookWidget {
                   children: [
                     // Update first topping
                     TextSpan(
-                      text: AppConst.pizzaToppingsFirst,
+                      text: AppStrings.pizzaToppingsFirst,
                       style: style.copyWith(
                         color: style.color!.withOpacity(firstToppingsValue),
                       ),
                     ),
                     // Update second topping
                     TextSpan(
-                      text: AppConst.pizzaToppingsSecond,
+                      text: AppStrings.pizzaToppingsSecond,
                       style: style.copyWith(
                         color: style.color!.withOpacity(secondToppingsValue),
                       ),

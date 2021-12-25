@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:flutter_resume_website/utils/spacing.dart';
+import 'package:flutter_resume_website/utils/const/const.dart';
 
 class TextBody extends StatelessWidget {
   final String text;
@@ -9,10 +9,10 @@ class TextBody extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Container(
-      margin: paddingBottom24,
+      margin: AppDimensions.paddingBottom24,
       child: Text(
         text,
-        style: Theme.of(context).textTheme.bodyText1,
+        style: Theme.of(context).textTheme.button,
       ),
     );
   }
@@ -26,7 +26,7 @@ class TextBodySecondary extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Container(
-      margin: paddingBottom24,
+      margin: AppDimensions.paddingBottom24,
       child: Text(
         text,
         style: Theme.of(context).textTheme.subtitle2,
@@ -43,7 +43,7 @@ class TextHeadlineSecondary extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Container(
-      margin: paddingBottom12,
+      margin: AppDimensions.paddingBottom12,
       child: Text(
         text,
         style: Theme.of(context).textTheme.subtitle1,
@@ -60,7 +60,7 @@ class TextBlockquote extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Container(
-      margin: paddingBottom24,
+      margin: AppDimensions.paddingBottom24,
       decoration: BoxDecoration(
           border: Border(left: BorderSide(width: 2, color: Color(0xFF333333)))),
       padding: EdgeInsets.only(left: 20),
@@ -68,7 +68,7 @@ class TextBlockquote extends StatelessWidget {
         alignment: Alignment.centerLeft,
         child: Text(
           text,
-          style: Theme.of(context).textTheme.bodyText1,
+          style: Theme.of(context).textTheme.button,
         ),
       ),
     );

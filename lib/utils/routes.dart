@@ -5,16 +5,26 @@ class Routes {
   static const String home = "/";
   static const String post = "post";
   static const String style = "style";
+  static const String about = "about";
+  static List<String?> _routes = [];
 
-  static Route<T> fadeThrough<T>(RouteSettings settings, WidgetBuilder page,
+  String? get getLastRoute => _routes.isEmpty ? '' : _routes.last;
+  static removeLastRoute() => _routes.removeLast();
+
+  static Route<T>? fadeThrough<T>(RouteSettings settings, WidgetBuilder page,
       {int duration = 300}) {
-    return PageRouteBuilder<T>(
-      settings: settings,
-      transitionDuration: Duration(milliseconds: duration),
-      pageBuilder: (context, animation, secondaryAnimation) => page(context),
-      transitionsBuilder: (context, animation, secondaryAnimation, child) {
-        return FadeScaleTransition(animation: animation, child: child);
-      },
-    );
+    if (_routes.isEmpty || _routes.last != settings.name) {
+      _routes.add(settings.name);
+      return PageRouteBuilder<T>(
+        settings: settings,
+        transitionDuration: Duration(milliseconds: duration),
+        pageBuilder: (context, animation, secondaryAnimation) => page(context),
+        transitionsBuilder: (context, animation, secondaryAnimation, child) {
+          return FadeScaleTransition(animation: animation, child: child);
+        },
+      );
+    } else {
+      return null;
+    }
   }
 }

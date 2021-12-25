@@ -1,4 +1,9 @@
 class AppImages {
+  // Dev images
+  static const String devFirstImage = 'assets/images/dev/dev_first_image.jpg';
+  static const String devSecondImage = 'assets/images/dev/dev_second_image.jpg';
+
+  // Company logos
   static const String gbkLogo = 'assets/images/jobs_logo/gbk_logo.png';
   static const String X1Logo = 'assets/images/jobs_logo/X1_logo.png';
   static const String catLogo = 'assets/images/jobs_logo/cat_logo.png';

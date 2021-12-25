@@ -4,7 +4,20 @@ import 'package:flutter_resume_website/utils/app_colors.dart';
 mixin AppTheme {
   static ThemeData get getThemeData => ThemeData(
         fontFamily: 'Montserrat',
-        textTheme: TextTheme(
+        colorScheme: const ColorScheme.light(
+          primary: AppColors.textPrimary,
+          secondary: AppColors.textSecondary,
+          background: AppColors.white,
+          onPrimary: AppColors.white,
+          onSecondary: AppColors.white,
+          onBackground: AppColors.textPrimary,
+        ),
+        buttonTheme: ButtonThemeData(
+          colorScheme: ColorScheme.light(
+            primary: AppColors.textPrimary,
+          ),
+        ),
+        textTheme: const TextTheme(
           // Main subtitle
           headline1: const TextStyle(
             fontSize: 55,
@@ -21,28 +34,26 @@ mixin AppTheme {
             color: AppColors.textHightlight,
             fontFamily: 'Montserrat',
           ),
-          // Button text style
           bodyText1: const TextStyle(
-            fontSize: 14,
-            color: AppColors.textPrimary,
-            fontFamily: 'Montserrat',
-          ),
-          // Menu bar text style
-          bodyText2: const TextStyle(
             color: AppColors.textPrimary,
             fontSize: 30,
             letterSpacing: 3,
             fontWeight: FontWeight.bold,
             fontFamily: 'Montserrat',
           ),
-          // Big subtitle style
+          bodyText2: const TextStyle(
+            fontSize: 28,
+            color: AppColors.textPrimary,
+            letterSpacing: 4,
+            fontWeight: FontWeight.w500,
+            fontFamily: 'Montserrat',
+          ),
           subtitle1: const TextStyle(
             fontSize: 20,
             color: AppColors.textPrimary,
             fontFamily: 'Montserrat',
             fontWeight: FontWeight.w400,
           ),
-          // Small subtitle style
           subtitle2: const TextStyle(
             fontSize: 18,
             color: AppColors.textSecondary,

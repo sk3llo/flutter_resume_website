@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 
-const Widget divider = Divider(color: Color(0xFFEEEEEE), thickness: 1);
+Widget divider = Container(height: 1, color: Color(0xFFEEEEEE));
+
 Widget dividerSmall = Container(
   width: 40,
   decoration: BoxDecoration(

@@ -1,9 +1,9 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_hooks/flutter_hooks.dart';
-import 'package:flutter_resume_website/utils/constants.dart';
+import 'package:flutter_resume_website/utils/const/const.dart';
 
-class AnimatedText extends HookWidget {
-  const AnimatedText({
+class AppAnimText extends HookWidget {
+  const AppAnimText({
     Key? key,
     required this.text,
     required this.opacity,
@@ -13,12 +13,12 @@ class AnimatedText extends HookWidget {
     this.width = 460,
   }) : super(key: key);
 
-  factory AnimatedText.bodyStyle({
+  factory AppAnimText.bodyStyle({
     required String text,
     required double opacity,
     required TextStyle? style,
   }) {
-    return AnimatedText(
+    return AppAnimText(
       text: text,
       letterSpacing: 2,
       opacity: opacity,
@@ -41,7 +41,7 @@ class AnimatedText extends HookWidget {
       alignment: alignment,
       child: AnimatedOpacity(
         opacity: opacity,
-        duration: AppConst.defaultAnimDuration,
+        duration: AppAnim.defaultAnimDuration,
         child: Text(
           text,
           textAlign: TextAlign.center,

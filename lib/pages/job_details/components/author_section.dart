@@ -41,7 +41,7 @@ List<Widget> authorSection(
                     alignment: Alignment.centerLeft,
                     child: Text(
                       bio,
-                      style: Theme.of(context).textTheme.bodyText1,
+                      style: Theme.of(context).textTheme.button,
                     ),
                   ),
               ],
