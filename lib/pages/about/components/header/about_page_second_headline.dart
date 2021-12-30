@@ -2,8 +2,8 @@ import 'package:flutter/material.dart';
 import 'package:flutter_hooks/flutter_hooks.dart';
 import 'package:flutter_resume_website/pages/about/components/components.dart';
 
-class HeaderSecondHeadline extends HookWidget {
-  const HeaderSecondHeadline({
+class AboutPageHeaderSecondHeadline extends HookWidget {
+  const AboutPageHeaderSecondHeadline({
     this.width = 450.0,
     required this.title,
     required this.subtitle,

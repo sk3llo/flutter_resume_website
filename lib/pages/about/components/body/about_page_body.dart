@@ -1,9 +1,8 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_resume_website/pages/about/components/components.dart';
-import 'package:flutter_resume_website/utils/app_colors.dart';
 import 'package:flutter_resume_website/utils/const/const.dart';
 
-class AboutBody extends StatelessWidget {
+class AboutPageBody extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Container(
@@ -37,7 +36,7 @@ class AboutBody extends StatelessWidget {
       child: Container(
         margin: EdgeInsets.only(right: 4),
         padding: EdgeInsets.all(26),
-        color: AppColors.lightOrange,
+        color: Theme.of(context).colorScheme.onBackground.withOpacity(.2),
         child: Column(
           children: [
             Align(

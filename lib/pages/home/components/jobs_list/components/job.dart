@@ -1,9 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_hooks/flutter_hooks.dart';
 import 'package:flutter_resume_website/pages/home/components/jobs_list/components/components.dart';
-import 'package:flutter_resume_website/utils/app_colors.dart';
 import 'package:flutter_resume_website/utils/const/const.dart';
-import 'package:flutter_resume_website/utils/routes.dart';
 
 class Job extends HookWidget {
   const Job({
@@ -11,11 +9,13 @@ class Job extends HookWidget {
     required this.companyName,
     required this.imageAsset,
     required this.description,
+    required this.flippedDescription,
   }) : super(key: key);
 
   final String companyName;
-  final String? imageAsset;
-  final String? description;
+  final String imageAsset;
+  final String description;
+  final String flippedDescription;
 
   @override
   Widget build(BuildContext context) {
@@ -30,7 +30,7 @@ class Job extends HookWidget {
           shape: RoundedRectangleBorder(
             side: BorderSide(
               color: isFocused.value
-                  ? AppColors.textHightlight.withOpacity(.5)
+                  ? Theme.of(context).colorScheme.primary
                   : Colors.transparent,
               width: .5,
             ),
@@ -39,60 +39,27 @@ class Job extends HookWidget {
         child: Row(
           mainAxisAlignment: MainAxisAlignment.spaceBetween,
           children: [
-            Expanded(
-              child: Column(
-                mainAxisAlignment: MainAxisAlignment.center,
-                crossAxisAlignment: CrossAxisAlignment.center,
-                children: [
-                  title(context),
-                  descriptionWidget(context),
-                  button(context),
-                ],
-              ),
+            JobDescription(
+              title: companyName,
+              description: description,
+              flippedDescription: flippedDescription,
             ),
-            SizedBox(width: 60),
-            image(),
+            image(context),
           ],
         ),
       ),
     );
   }
 
-  Widget title(BuildContext context) {
-    return Padding(
-      padding: AppDimensions.paddingBottom12,
-      child: Text(
-        companyName,
-        style: Theme.of(context).textTheme.bodyText1,
-      ),
-    );
-  }
-
-  Widget descriptionWidget(BuildContext context) {
-    return Padding(
-      padding: AppDimensions.paddingBottom16,
-      child: Text(
-        description!,
-        style: Theme.of(context).textTheme.subtitle2,
-      ),
-    );
-  }
-
-  Widget button(BuildContext context) {
-    return ReadMoreButton(
-      onPressed: () => Navigator.pushNamed(context, Routes.post),
-    );
-  }
-
-  Widget image() {
+  Widget image(BuildContext context) {
     return Expanded(
       child: Container(
         height: AppDimensions.jobWidgetHeight,
-        color: AppColors.boxHightlight.withOpacity(.5),
+        color: Theme.of(context).colorScheme.onBackground.withOpacity(.1),
         child: Transform.scale(
           scale: .7,
           child: ImageWrapper(
-            image: imageAsset!,
+            image: imageAsset,
             fit: BoxFit.contain,
           ),
         ),

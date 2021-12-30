@@ -1,13 +1,15 @@
 import 'package:flutter/material.dart';
-import 'package:flutter_resume_website/utils/app_colors.dart';
+import 'package:flutter_resume_website/utils/const/app_strings.dart';
 
-class ReadMoreButton extends StatelessWidget {
-  const ReadMoreButton({
+class ReadButton extends StatelessWidget {
+  const ReadButton({
     Key? key,
     required this.onPressed,
+    this.readMore = true,
   }) : super(key: key);
 
   final Function onPressed;
+  final bool readMore;
 
   @override
   Widget build(BuildContext context) {
@@ -20,18 +22,21 @@ class ReadMoreButton extends StatelessWidget {
         child: OutlinedButton(
           onPressed: onPressed as void Function()?,
           style: ButtonStyle(
-            side: MaterialStateProperty.all(
-                BorderSide(color: AppColors.textPrimary, width: 2)),
+            side: MaterialStateProperty.all(BorderSide(
+                color: Theme.of(context).colorScheme.primaryVariant, width: 2)),
             padding:
                 MaterialStateProperty.all(EdgeInsets.symmetric(horizontal: 20)),
             fixedSize: MaterialStateProperty.all(Size.fromWidth(320)),
-            overlayColor: MaterialStateProperty.all(AppColors.textPrimary),
+            overlayColor: MaterialStateProperty.all(
+                Theme.of(context).colorScheme.primary),
           ),
           child: Text(
-            "READ MORE",
+            readMore ? AppStrings.readMoreButton : AppStrings.readLessButton,
             style: TextStyle(
                 fontSize: 14,
-                color: hover ? Colors.white : AppColors.textPrimary,
+                color: hover
+                    ? Colors.white
+                    : Theme.of(context).colorScheme.primaryVariant,
                 letterSpacing: 1),
           ),
         ),

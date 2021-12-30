@@ -1,5 +1,4 @@
 import 'package:flutter/material.dart';
-import 'package:flutter_resume_website/pages/about/about_page.dart';
 import 'package:flutter_resume_website/utils/app_theme.dart';
 import 'package:flutter_resume_website/utils/routes.dart';
 import 'package:hooks_riverpod/hooks_riverpod.dart';
@@ -37,8 +36,6 @@ class MyApp extends StatelessWidget {
                 return Home();
               case Routes.post:
                 return JobDetailsPage();
-              case Routes.style:
-                return TypographyPage();
               case Routes.about:
                 return AboutPage();
               default:
@@ -46,9 +43,7 @@ class MyApp extends StatelessWidget {
             }
           })!
             // When route is popped remove last entry of it from Routes instance
-            ..popped.then((value) {
-              Routes.removeLastRoute();
-            });
+            ..popped.then((_) => Routes.removeLastRoute());
         },
         debugShowCheckedModeBanner: false,
       ),

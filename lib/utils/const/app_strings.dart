@@ -16,6 +16,8 @@ abstract class AppStrings {
   static const pizzaToppingsFirst = '- 🧂 And the toppings... ';
   static const pizzaToppingsSecond = 'well, the toppings will depend on '
       'the project that I’m working on at the time';
+  static const readMoreButton = "READ MORE";
+  static const readLessButton = "READ LESS";
 
   // TOOLBAR actions
   static const toolbarFirstAction = 'HOME';

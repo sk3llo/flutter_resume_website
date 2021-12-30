@@ -1,7 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_hooks/flutter_hooks.dart';
 import 'package:flutter_resume_website/pages/home/components/jobs_list/components/components.dart';
-import 'package:flutter_resume_website/utils/app_colors.dart';
 import 'package:flutter_resume_website/utils/app_images.dart';
 import 'package:flutter_resume_website/utils/const/const.dart';
 import 'package:url_launcher/url_launcher.dart' as url;
@@ -39,8 +38,8 @@ class FooterLogo extends HookWidget {
           shape: CircleBorder(
             side: BorderSide(
               color: isFocused.value
-                  ? AppColors.textSecondary
-                  : AppColors.inactiveColor,
+                  ? Theme.of(context).colorScheme.primary
+                  : Theme.of(context).colorScheme.primaryVariant,
               width: isFocused.value ? 3 : 1,
             ),
           ),

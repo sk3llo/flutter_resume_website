@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
 
-class MenuBarAction extends StatelessWidget {
-  const MenuBarAction({
+class AppToolbarAction extends StatelessWidget {
+  const AppToolbarAction({
     Key? key,
     required this.onPressed,
     required this.title,

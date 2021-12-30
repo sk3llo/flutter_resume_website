@@ -49,9 +49,9 @@ class AboutPage extends HookWidget {
                   key: headerKey,
                   children: [
                     SizedBox(height: mQuerySize.height / 4),
-                    HeaderFirstHeadline(),
+                    AboutPageHeaderFirstHeadline(),
                     SizedBox(height: mQuerySize.height / 2),
-                    HeaderSecondHeadline(
+                    AboutPageHeaderSecondHeadline(
                       title: AppStrings.aboutPageBodyTitle,
                       subtitle: AppStrings.aboutPageBodySubtitle,
                     )
@@ -74,7 +74,7 @@ class AboutPage extends HookWidget {
               ),
             ],
           ),
-          AboutBody(),
+          AboutPageBody(),
           Footer(),
         ],
       ),
