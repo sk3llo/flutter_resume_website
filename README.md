@@ -1,4 +1,4 @@
-Resume web app build with Flutter. Few things to note:
+Resume web app built with Flutter. Few things to note:
 
 - State management with [Hooks Riverpod](https://pub.dev/packages/hooks_riverpod)
   and [Flutter Hooks](https://pub.dev/packages/flutter_hooks)
