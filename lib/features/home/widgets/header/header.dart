@@ -12,7 +12,7 @@ class Header extends HookWidget {
 
   @override
   Widget build(BuildContext context) {
-    ValueNotifier<double> opacityValues = useState(0.0);
+    final opacityValues = useState(0.0);
 
     // Run once unless key changes
     useEffect(() {

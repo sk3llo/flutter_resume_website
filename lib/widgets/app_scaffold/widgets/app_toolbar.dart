@@ -61,14 +61,17 @@ class SliverAppToolbar extends StatelessWidget {
           }
         },
       ),
-      flexibleSpace: LayoutBuilder(
-        builder: (context, constraints) {
-          if (constraints.maxWidth > 800) {
-            return buildDesktopToolbar(context, constraints);
-          } else {
-            return buildMobileToolbar(context, entry);
-          }
-        },
+      flexibleSpace: Hero(
+        tag: 'toolbar',
+        child: LayoutBuilder(
+          builder: (context, constraints) {
+            if (constraints.maxWidth > 800) {
+              return buildDesktopToolbar(context, constraints);
+            } else {
+              return buildMobileToolbar(context, entry);
+            }
+          },
+        ),
       ),
     );
   }
@@ -125,12 +128,8 @@ class SliverAppToolbar extends StatelessWidget {
   }
 
   Widget leading(BuildContext context) {
-    return GestureDetector(
-      onTap: () => Navigator.popUntil(
-          context, ModalRoute.withName(Navigator.defaultRouteName)),
-      child: Text('${AppStrings.devFirstName} ${AppStrings.devLastName}',
-          style: Theme.of(context).textTheme.bodyText1),
-    );
+    return Text('${AppStrings.devFirstName} ${AppStrings.devLastName}',
+        style: Theme.of(context).textTheme.bodyText1);
   }
 
   List<Widget> toolbarActions(BuildContext context, {OverlayEntry? entry}) {

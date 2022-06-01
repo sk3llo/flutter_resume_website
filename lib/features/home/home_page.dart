@@ -18,7 +18,7 @@ class HomePage extends ConsumerWidget {
     return AppScaffold(
       scrollController: scrollController,
       child: Column(
-        children: <Widget>[
+        children: const <Widget>[
           Header(),
           JobsList(),
           Footer(),
